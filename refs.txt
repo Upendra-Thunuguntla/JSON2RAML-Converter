@@ -1,0 +1,19 @@
+https://stackoverflow.com/questions/47436236/how-to-check-if-it-is-a-jsonarray-or-jsonobject-in-javascript
+
+https://stackoverflow.com/questions/37658524/copying-text-of-textarea-in-clipboard-when-button-is-clicked
+
+https://stackoverflow.com/questions/17636528/how-do-i-load-an-html-page-in-a-div-using-javascript
+
+#%RAML 1.0 DataType
+type: object
+properties:
+  status: string
+  environment: string
+  dateTime: datetime
+
+
+{
+    "status": "ok",
+    "environment": "dev",
+    "dateTime": "2016-02-28T16:41:41.090Z"
+}
