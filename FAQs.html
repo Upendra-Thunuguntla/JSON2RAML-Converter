@@ -1,0 +1,288 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script id="rendered-js" src="script.js"></script>
+    <title>JSON to RAML Converter</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-dark bg-primary">
+	<a class="navbar-brand" href="/">JSON to RAML Converter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+            <li class="nav-item dropdown">
+				<a class="nav-link " href="index.html" role="button" >
+					Home 🏠 
+				</a>
+			</li>
+            <li class="nav-item dropdown">
+				<a class="nav-link " href="#" role="button" onclick="comingSoon()" >
+					Upload JSON ⬆ 
+				</a>
+			</li>
+            <li class="nav-item dropdown">
+				<a class="nav-link " href="FAQs.html" role="button" >
+					FAQs 💡 
+				</a>
+			</li>
+
+        </ul>
+    </div>
+
+</nav>
+
+<div class="faq_area section_padding_130" id="faq">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <!-- Section Heading-->
+                <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <h3><span>Frequently </span> Asked Questions</h3>
+                    <p>Here you can find few Questions and Answers about this tool</p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- FAQ Area-->
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="accordion faq-accordian" id="faqAccordion">
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingOne">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What kind of JSON Objects or Data Types does this support ?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>This tool supports <code>JSON Object, JSON Array, String, Number, Boolean & Null</code> types</p>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingFour">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">How to make a key optional ?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>if RAML has <code>sampleKey: string</code> and you want to make this optional then change it to <code>sampleKey?: string</code></p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingFive">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">How to add another data type for a key ?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>if RAML has <code>sampleKey: string</code> and you want to make this accept both string or null then change it to <code>sampleKey: string | nil</code></p> 
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingSix">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Where do we find Guide to RAML ?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>You can use their official GitHub Handle : <a href="https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md">RAML Guide</a></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <strong>Common Errors</strong>
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingTwo">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">....[x] should have required property'.....' <span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Sample Input :
+                                <code style="display:block; white-space:pre-wrap">
+{
+"id": "1250d74",
+"name": "Client",
+"type": "drop_down",
+"config": {
+	"default": 0,
+	"placeholder": null,
+	"options": [
+		{
+			"id": "a545a133-3acd-45d1-b3c7-670352c9f968",
+			"name": "On Track ",
+			"color": "#2ecd6f",
+			"orderindex": 0,
+			"value": null
+		},
+		{
+			"id": "0dcd9036-88e0-4833-b9fc-519f61190bed",
+			"name": "At Risk",
+			"color": "#f9d900",
+			"orderindex": 1
+		},
+		{
+			"id": "82984243-5038-4fb4-a494-4bae0af4cc61",
+			"name": "Off Track",
+			"color": "#e50000",
+			"orderindex": 2
+		}
+        ]
+    }
+}</code>
+
+If you observe in the above options array options[0] has extra key called <code>value</code> which is not there in options[1] or options[2]. So while validating the RAML you'll required property not found error.
+
+To Solve this use ? to make the key optional.
+
+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingThree">
+                            <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Contact form isn't working?<span class="lni-chevron-up"></span></h6>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem facere deserunt sint animi sapiente vitae suscipit.</p>
+                                <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- Support Button-->
+                <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <i class="lni-emoji-sad"></i>
+                    <p class="mb-0 px-2">Can't find your answers?</p>
+                    <a href="https://www.linkedin.com/in/muralid25"> Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark py-5 small">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<label style="color: white ;"><strong>Useful Links:</strong></label>
+				<ul class="list-unstyled">
+						<li><a href="https://bit.ly/SimpleHikeCalc" target="_blank">💰 Salary Hike Calculator</a></li>
+						<li><a href="https://www.linkedin.com/in/muralid25" target="_blank" >🗽 My Linkedin</a></li>
+						<li><a href="https://github.com/Upendra-Thunuguntla" target="_blank" >👨‍💻 My Github</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> -->
+<style>
+body{
+    
+    /* margin-top:20px; */
+    background-color: #f5f5ff;
+}
+.section_padding_130 {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.faq_area {
+    position: relative;
+    z-index: 1;
+    background-color: #f5f5ff;
+}
+
+.faq-accordian {
+    position: relative;
+    z-index: 1;
+}
+.faq-accordian .card {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+.faq-accordian .card:last-child {
+    margin-bottom: 0;
+}
+.faq-accordian .card .card-header {
+    background-color: #ffffff;
+    padding: 0;
+    border-bottom-color: #ebebeb;
+}
+.faq-accordian .card .card-header h6 {
+    cursor: pointer;
+    padding: 1.75rem 2rem;
+    color: #3f43fd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.faq-accordian .card .card-header h6 span {
+    font-size: 1.5rem;
+}
+.faq-accordian .card .card-header h6.collapsed {
+    color: #070a57;
+}
+.faq-accordian .card .card-header h6.collapsed span {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.faq-accordian .card .card-body {
+    padding: 1.75rem 2rem;
+}
+.faq-accordian .card .card-body p:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 575px) {
+    .support-button p {
+        font-size: 14px;
+    }
+}
+
+.support-button i {
+    color: #3f43fd;
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 575px) {
+    .support-button i {
+        font-size: 1rem;
+    }
+}
+
+.support-button a {
+    text-transform: capitalize;
+    color: #2ecc71;
+}
+@media only screen and (max-width: 575px) {
+    .support-button a {
+        font-size: 13px;
+    }
+} 
+</style>
+</body>
+</html>

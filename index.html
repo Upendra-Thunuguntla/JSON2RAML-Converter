@@ -19,13 +19,18 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a class="nav-link " href="index.html" role="button" >
+					Home 🏠 
+				</a>
+			</li>
             <li class="nav-item dropdown">
 				<a class="nav-link " href="#" role="button" onclick="comingSoon()" >
 					Upload JSON ⬆ 
 				</a>
 			</li>
             <li class="nav-item dropdown">
-				<a class="nav-link " href="FAQs.md" role="button" >
+				<a class="nav-link " href="FAQs.html" role="button" >
 					FAQs 💡 
 				</a>
 			</li>
@@ -41,12 +46,12 @@
 		<div class="col-12">
 			<h1>JSON to RAML Datatype Converter online</h1>
 		</div>
-		<div class="col-md-9 col-sm-12">Transform your JSON Example to RAML Dataype for API Design</div>
+		<div class="col-md-9 col-sm-12">Transform your JSON Example to RAML Dataype for API Design </br> <code>PS : This is not a perfect tool. But, I hope this will save a lot of time for you 🤗 </code></div>
 	</div>
 	<div class="row my-3">
 		<div class="col-md-6">
 			<label for="input">Paste your JSON here 👇</label>
-			<textarea  rows="10" class="form-control" id="input" placeholder="Feeling empty already 🥺 Fill me with JSON 😋"></textarea>
+			<textarea  rows="10" class="form-control" id="input" placeholder="Feeling empty already 🥺 do you have any JSON to process😋"></textarea>
 			<button onclick="clearContents()" class="btn btn-light my-3">Clear 😣</button>
             <button onclick="convert()" class="btn btn-success">Convert 😁</button>
 		</div>
@@ -63,42 +68,31 @@
 </div>
 </div>
 
-<!-- <footer class="bg-light py-5 small">
+<footer class="bg-dark py-5 small">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<label><strong>Text Case Tools:</strong></label>
+			<div class="col-md-5">
+				<label style="color: white ;"><strong>Useful Links:</strong></label>
 				<ul class="list-unstyled">
-						<li><a href="/uppercase">Text to UPPERCASE</a></li>
-						<li><a href="/lowercase">Text to lowercase</a></li>
-						<li><a href="/camelcase">Text to camelCase</a></li>
-						<li><a href="/kebabcase">Text to kebab-case</a></li>
-						<li><a href="/snakecase">Text to snake_case</a></li>
-						<li><a href="/titlecase">Text to Title Case</a></li>
-						<li><a href="/capitalize">Capitalize text</a></li>
-						<li><a href="/invertcase">Invert Text Case</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<label><strong>Text Edit Tools:</strong></label>
-				<ul class="list-unstyled">
-						<li><a href="/remove-multiple-spaces">Remove Multiple Spaces</a></li>
-						<li><a href="/remove-digits">Remove Digits</a></li>
-						<li><a href="/digits-only">Remove All Except Numbers</a></li>
-						<li><a href="/slugify">Slugify Text</a></li>
+						<li><a href="https://bit.ly/SimpleHikeCalc" target="_blank">💰 Salary Hike Calculator</a></li>
+						<li><a href="https://www.linkedin.com/in/muralid25" target="_blank" >🗽 My Linkedin</a></li>
+						<li><a href="https://github.com/Upendra-Thunuguntla" target="_blank" >👨‍💻 My Github</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-</footer> -->
+</footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-<script>new ClipboardJS('.copy.btn');</script>
+<style>
+	body{
+		
+		/* margin-top:20px; */
+		background-color: #f5f5ff;
+	}
+	</style>
 </body>
 </html>
