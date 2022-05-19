@@ -2,9 +2,12 @@
 var TAB = "  ";
 var LE = "\n";
 var header = "#%RAML 1.0 DataType" + LE;
+var keysOptional ;
 
 function convert() {
+	keysOptional = areKeysOptional.checked;
 	jsonInput = input.value;
+	console.log(keysOptional);
 	opString = "";
 	if (jsonInput == '' || jsonInput == null) {
 		output.value = "Input is Empty 🙄🙄";
@@ -12,11 +15,6 @@ function convert() {
 		opString = "Invalid JSON, Plese check your input !!!";
 	} else {
 		opString = header + buildRoot(jsonInput);
-		// var inpJson = JSON.parse(jsonInput);
-		// var level = 1;
-		// for (var key in inpJson) {
-		// 	opString += getTabs(level) + getElementType(key, inpJson[key], level) + LE;
-		// }
 	}
 	output.value = opString.replace("\n\n", "\n");
 }
@@ -75,7 +73,11 @@ function buildArray(isRootObj, array, level) {
 
 function getElementType(key, str, level) {
 	var type = "";
+	if (keysOptional) {
+		key = (key === null) ? null : key+"?";
+	}
 	key = (key === null) ? "type" : key;
+
 	if (Array.isArray(str)) {
 		type = key + ": " + LE + buildArray(false, str, level);
 	} else if (str === null) {
@@ -101,7 +103,7 @@ function getTabs(level) {
 }
 
 // Non Functional requirments 
-function loadPage(){
+function loadPage() {
 	clearContents();
 	document.getElementById("input").focus();
 }
@@ -137,7 +139,7 @@ function downloadRAML() {
 	} else {
 		if (output.value.startsWith(header) && fileName.value == "") {
 			alert("Please enter file name");
-		} else if (!output.value.startsWith(header) && fileName.value != ""){
+		} else if (!output.value.startsWith(header) && fileName.value != "") {
 			alert("Please check your input");
 		} else {
 			alert("Please check your input and file name");
@@ -145,6 +147,6 @@ function downloadRAML() {
 	}
 }
 
-function comingSoon(){
+function comingSoon() {
 	alert("This feature is coming soon 🤞🤞");
 }
