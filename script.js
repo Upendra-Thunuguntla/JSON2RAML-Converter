@@ -3,11 +3,13 @@ var TAB = "  ";
 var LE = "\n";
 var header = "#%RAML 1.0 DataType" + LE;
 var keysOptional ;
+var keysCamelCased;
 
 function convert() {
 	keysOptional = areKeysOptional.checked;
+	keysCamelCased = areKeysCamelCased.checked;
 	jsonInput = input.value;
-	console.log(keysOptional);
+	// console.log(keysOptional);
 	opString = "";
 	if (jsonInput == '' || jsonInput == null) {
 		output.value = "Input is Empty 🙄🙄";
@@ -73,9 +75,13 @@ function buildArray(isRootObj, array, level) {
 
 function getElementType(key, str, level) {
 	var type = "";
+	if (keysCamelCased) {
+		key = (key === null) ? null : v.camelCase(key);
+	}
 	if (keysOptional) {
 		key = (key === null) ? null : key+"?";
 	}
+
 	key = (key === null) ? "type" : key;
 
 	if (Array.isArray(str)) {
