@@ -14,9 +14,11 @@ So I questioned why we should spend so much time in Copy & Pasting in 2022. I ca
 
 ## About this Project
 Deployed using 
+
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 
 Version Control on
+
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter)
 
 JSON to RAML datatype converter is a tool designed to help Mulesoft developers which can be used to convert JSON data to the RAML data type. This tool has two options that can be used to make all keys optional in RAML and make all keys CamelCase in RAML.
@@ -26,5 +28,7 @@ JSON to RAML datatype converter is a tool designed to help Mulesoft developers w
 ## How to use this Tool
 This tool is hosted on GitHub Pages. 
 
-Visit this link: https://bit.ly/JSON2RAML 
+Visit this link:
+
+[![JSON2RAML](https://dabuttonfactory.com/button.png?t=JSON+to+RAML+Converter&f=Open+Sans-Bold&ts=18&tc=fff&hp=25&vp=15&c=11&bgt=unicolored&bgc=007bff)](https://bit.ly/JSON2RAML) 
 
