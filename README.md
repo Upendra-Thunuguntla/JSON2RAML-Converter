@@ -32,3 +32,7 @@ Visit this link:
 
 [![JSON2RAML](https://dabuttonfactory.com/button.png?t=JSON+to+RAML+Converter&f=Open+Sans-Bold&ts=18&tc=fff&hp=25&vp=15&c=11&bgt=unicolored&bgc=007bff)](https://bit.ly/JSON2RAML) 
 
+
+To use this tool in Docker - Visit this link : 
+
+[![JSON2RAMLDocker](https://ml.globenewswire.com/Resource/Download/c83c4886-b215-4cf0-a973-64b8f65e7003?size=1)](https://hub.docker.com/repository/docker/upendrathunuguntla/json2raml/general) 
