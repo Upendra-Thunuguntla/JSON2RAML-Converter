@@ -6,10 +6,6 @@ var keysOptional ;
 var keysCamelCased;
 
 function convert() {
-	gtag('event', 'convert', {
-        'app_name': 'myAppName',
-        'screen_name': 'Home'
-      });
 	keysOptional = areKeysOptional.checked;
 	keysCamelCased = areKeysCamelCased.checked;
 	jsonInput = input.value;
