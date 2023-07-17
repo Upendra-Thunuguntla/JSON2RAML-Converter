@@ -1,6 +1,7 @@
 name: Docker Build and Push
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -13,10 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
-    - name: Get Git Commit Hash
-      id: git_commit
-      run: echo "::set-output name=hash::$(git rev-parse --short HEAD)"
-    
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
@@ -28,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: upendrathunuguntla/json2raml:latest
+        tags: ${{ vars.DOCKER_IMAGE }}:latest
