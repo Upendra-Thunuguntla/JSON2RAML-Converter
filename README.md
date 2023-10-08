@@ -1,3 +1,6 @@
+[![Docker Build and Push](https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter/actions/workflows/docker-image.yml)
+[![Deploy static content to Pages](https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter/actions/workflows/static.yml/badge.svg)](https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter/actions/workflows/static.yml)
+
 # JSON to RAML Datatype - Converter
 
 ## Overview
