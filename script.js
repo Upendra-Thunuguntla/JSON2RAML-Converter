@@ -5,6 +5,12 @@ var header = "#%RAML 1.0 DataType" + LE;
 var keysOptional ;
 var keysCamelCased;
 
+
+function loadExample(){
+	document.getElementById("input").value="{\r\n  \"string\": \"Hello, World!\",\r\n  \"number\": 42,\r\n  \"boolean\": true,\r\n  \"nullValue\": null,\r\n  \"array\": [1, 2, 3],\r\n  \"object\": {\r\n    \"property\": \"value\"\r\n  }\r\n}\r\n";
+	gtag('event', 'load_example', {});
+}
+
 function convert() {
 	keysOptional = areKeysOptional.checked;
 	keysCamelCased = areKeysCamelCased.checked;
@@ -19,6 +25,10 @@ function convert() {
 		opString = header + buildRoot(jsonInput);
 	}
 	output.value = opString.replace("\n\n", "\n");
+	gtag('event', 'clicked on convert', {
+		"inputSize" : jsonInput.length,
+		"outputSize" : opString.length
+	});
 }
 
 function isValidJSONString(str) {
@@ -121,10 +131,12 @@ function copy() {
 		document.execCommand("copy");
 		window.getSelection().removeAllRanges();
 		alert("Copied to clipboard");
+		gtag('event', 'RAML Copied to Clipboard', {});
 	}
 }
 
 function clearContents() {
+	gtag('event', 'ClearContents', {});
 	input.value = "";
 	output.value = "";
 	fileName.hidden = true;
@@ -142,6 +154,7 @@ function downloadRAML() {
 		document.body.appendChild(element);
 		element.click();
 		document.body.removeChild(element);
+		gtag('event', 'RAML Downloaded', {});
 	} else {
 		if (output.value.startsWith(header) && fileName.value == "") {
 			alert("Please enter file name");
