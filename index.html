@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,114 +9,229 @@
 	<meta name="google-site-verification" content="BCjSwBqP4XS2yH1CVwXNsntcBvNIjNuhN8M8aGM670Q" />
 	<meta name="msvalidate.01" content="654C959A926C63EAED391D1C87EE6A47" />
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<meta name="description" content="JSON to RAML Datatype converter for mulesoft API Designer">
-    <script id="rendered-js" src="script.js"></script>
-	<script src="voca.min.js" ></script>
+	<script id="rendered-js" src="script.js"></script>
+	<script src="voca.min.js"></script>
 	<title>JSON to RAML Converter | Mulesoft</title>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-398H4FBSEH"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
 
-  gtag('config', 'G-398H4FBSEH');
+	gtag('config', 'G-398H4FBSEH');
 </script>
+
 <body onload="loadPage()">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-dark bg-primary">
-	<a class="navbar-brand" href="/">JSON to RAML Converter</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		<ul class="navbar-nav">
-			<li class="nav-item dropdown">
-				<a class="nav-link " href="index.html" role="button">Home 🏠</a>
-			</li>
-            <!-- <li class="nav-item dropdown">
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary navbar-dark bg-primary">
+		<a class="navbar-brand" href="/">JSON to RAML Converter</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link " href="index.html" role="button">Home 🏠</a>
+				</li>
+				<!-- <li class="nav-item dropdown">
 				<a class="nav-link " href="#" role="button" onclick="comingSoon()" >Upload JSON ⬆ </a>
 			</li> -->
-            <li class="nav-item dropdown">
-				<a class="nav-link " href="FAQs.html" role="button" >FAQs 💡</a>
-			</li>
-        </ul>
-    </div>
-</nav>
-<div class="container my-5">
-<div id="app">
-	<div class="row my-7">
-		<div class="col-12">
-			<h1>JSON to RAML Datatype Converter online</h1>
+				<li class="nav-item dropdown">
+					<a class="nav-link " href="FAQs.html" role="button">FAQs 💡</a>
+				</li>
+			</ul>
 		</div>
-		<div class="col-md-9 col-sm-12">Transform your JSON Example to RAML Dataype for API Design </br> <code>PS : This is not a perfect tool. But, I hope this will save a lot of time for you 🤗 </code></div>
+	</nav>
+	<div class="container my-5">
+		<div id="app">
+			<div class="row my-7">
+				<div class="col-12">
+					<h1>JSON to RAML Datatype Converter online</h1>
+				</div>
+				<div class="col-md-9 col-sm-12">Transform your JSON Example to RAML Dataype for API Design </br>
+					<code>PS : This is not a perfect tool. But, I hope this will save a lot of time for you 🤗 </code>
+				</div>
+			</div>
+			<div class="row my-3">
+				<div class="col-md-6">
+					<label for="input">Paste your JSON here 👇</label>
+					<textarea rows="10" class="form-control" id="input"
+						placeholder="Feeling empty already 🥺 do you have any JSON to process😋"></textarea>
+					<div class="form-check" data-toggle="tooltip" data-placement="top"
+						title="If you choose this option you will see key?: string instead of key: string">
+						<input class="form-check-input" type="checkbox" value="" id="areKeysOptional">
+						<label class="form-check-label" for="areKeysOptional">
+							Make all Keys Optional in RAML
+							<svg height="16" width="16" viewBox="0 0 16 16">
+								<path fill="#skin_color_information"
+									d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM8.9 13h-2v-2h2v2zM11 8.1c-0.4 0.4-0.8 0.6-1.2 0.7-0.6 0.4-0.8 0.2-0.8 1.2h-2c0-2 1.2-2.6 2-3 0.3-0.1 0.5-0.2 0.7-0.4 0.1-0.1 0.3-0.3 0.1-0.7-0.2-0.5-0.8-1-1.7-1-1.4 0-1.6 1.2-1.7 1.5l-2-0.3c0.1-1.1 1-3.2 3.6-3.2 1.6 0 3 0.9 3.6 2.2 0.4 1.1 0.2 2.2-0.6 3z">
+								</path>
+							</svg>
+						</label>
+					</div>
+					<div class="form-check" data-toggle="tooltip" data-placement="top"
+						title="If you choose this option all the keys will be converted to CamelCase using Vue JS">
+						<input class="form-check-input" type="checkbox" value="" id="areKeysCamelCased">
+						<label class="form-check-label" for="areKeysCamelCased">
+							Make all Keys CamelCase in RAML
+							<svg height="16" width="16" viewBox="0 0 16 16">
+								<path fill="#skin_color_information"
+									d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM8.9 13h-2v-2h2v2zM11 8.1c-0.4 0.4-0.8 0.6-1.2 0.7-0.6 0.4-0.8 0.2-0.8 1.2h-2c0-2 1.2-2.6 2-3 0.3-0.1 0.5-0.2 0.7-0.4 0.1-0.1 0.3-0.3 0.1-0.7-0.2-0.5-0.8-1-1.7-1-1.4 0-1.6 1.2-1.7 1.5l-2-0.3c0.1-1.1 1-3.2 3.6-3.2 1.6 0 3 0.9 3.6 2.2 0.4 1.1 0.2 2.2-0.6 3z">
+								</path>
+							</svg>
+						</label>
+					</div>
+					<button onclick="loadExample()" class="btn btn-info my-3">Load Example</button>
+					<button onclick="clearContents()" class="btn btn-danger my-3">Clear 😣</button>
+					<button onclick="convert()" class="btn btn-success">Convert 😁</button>
+				</div>
+				<div class="col-md-6">
+					<label for="output bold">Result 👇</label>
+					<textarea rows="10" class="form-control" readonly id="output"
+						placeholder="RAML Result will be here"></textarea>
+					<input hidden="true" id="fileName" class="form-control" value="" placeholder="Name for RAML ⌨">
+					<button onclick="copy()" class="copy btn btn-success my-3">Copy to clipboard 📋</button>
+					<button onclick="downloadRAML()" class="btn btn-primary">Download to RAML file 📁</button>
+				</div>
+			</div>
+
+
+		</div>
 	</div>
-	<div class="row my-3">
-		<div class="col-md-6">
-			<label for="input">Paste your JSON here 👇</label>
-			<textarea  rows="10" class="form-control" id="input" placeholder="Feeling empty already 🥺 do you have any JSON to process😋"></textarea>
-			<div class="form-check" data-toggle="tooltip" data-placement="top" title="If you choose this option you will see key?: string instead of key: string">
-				<input class="form-check-input" type="checkbox" value="" id="areKeysOptional" >
-				<label class="form-check-label" for="areKeysOptional">
-				  Make all Keys Optional in RAML 
-				  <svg height="16" width="16" viewBox="0 0 16 16"><path fill="#skin_color_information" d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM8.9 13h-2v-2h2v2zM11 8.1c-0.4 0.4-0.8 0.6-1.2 0.7-0.6 0.4-0.8 0.2-0.8 1.2h-2c0-2 1.2-2.6 2-3 0.3-0.1 0.5-0.2 0.7-0.4 0.1-0.1 0.3-0.3 0.1-0.7-0.2-0.5-0.8-1-1.7-1-1.4 0-1.6 1.2-1.7 1.5l-2-0.3c0.1-1.1 1-3.2 3.6-3.2 1.6 0 3 0.9 3.6 2.2 0.4 1.1 0.2 2.2-0.6 3z"></path></svg>
-				  </label>
-			  </div>
-			  <div class="form-check" data-toggle="tooltip" data-placement="top" title="If you choose this option all the keys will be converted to CamelCase using Vue JS">
-				<input class="form-check-input" type="checkbox" value="" id="areKeysCamelCased" >
-				<label class="form-check-label" for="areKeysCamelCased">
-				  Make all Keys CamelCase in RAML
-				  <svg height="16" width="16" viewBox="0 0 16 16"><path fill="#skin_color_information" d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM8.9 13h-2v-2h2v2zM11 8.1c-0.4 0.4-0.8 0.6-1.2 0.7-0.6 0.4-0.8 0.2-0.8 1.2h-2c0-2 1.2-2.6 2-3 0.3-0.1 0.5-0.2 0.7-0.4 0.1-0.1 0.3-0.3 0.1-0.7-0.2-0.5-0.8-1-1.7-1-1.4 0-1.6 1.2-1.7 1.5l-2-0.3c0.1-1.1 1-3.2 3.6-3.2 1.6 0 3 0.9 3.6 2.2 0.4 1.1 0.2 2.2-0.6 3z"></path></svg>
-				  </label>
-			  </div>
-			<button onclick="loadExample()" class="btn btn-info my-3" >Load Example</button>
-			<button onclick="clearContents()" class="btn btn-danger my-3" >Clear 😣</button>
-            <button onclick="convert()" class="btn btn-success">Convert 😁</button>
-		</div>
-		<div class="col-md-6">
-			<label for="output bold">Result 👇</label>
-			<textarea  rows="10" class="form-control" readonly id="output" placeholder="RAML Result will be here"></textarea>
-            <input  hidden="true" id="fileName" class="form-control"  value="" placeholder="Name for RAML ⌨">
-			<button onclick="copy()" class="copy btn btn-success my-3">Copy to clipboard 📋</button>
-			<button onclick="downloadRAML()" class="btn btn-primary">Download to RAML file 📁</button>
-		</div>
-	</div>
 
+	<footer style="position: absolute; bottom: 5; width: 100%; text-align: center;">
+		Designed by
+		<a href="mailto:muralidhar.thunuguntla@gmail.com">Upendra Thunuguntla ❤️</a> |
+		<a href="https://www.linkedin.com/in/upendra-thunuguntla/">LinkedIn</a> |
+		<a href="https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter">Github Repo</a> |
+		<a href="https://hub.docker.com/repository/docker/upendrathunuguntla/json2raml">Run on Docker</a>
+	</footer>
 
-</div>
-</div>
-
-<footer style="position: absolute; bottom: 5; width: 100%; text-align: center;"> 
-	Designed by 
-	<a href="mailto:muralidhar.thunuguntla@gmail.com">Upendra Thunuguntla ❤️</a> | 
-	<a href="https://www.linkedin.com/in/upendra-thunuguntla/">LinkedIn</a> |  
-	<a href="https://github.com/Upendra-Thunuguntla/JSON2RAML-Converter">Github Repo</a> | 
-	<a href="https://hub.docker.com/repository/docker/upendrathunuguntla/json2raml">Run on Docker</a>
-</footer>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- <script async src="https://api.countapi.xyz/hit/JSON2RAML/counter?callback=cb"></script> -->
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<!-- <script async src="https://api.countapi.xyz/hit/JSON2RAML/counter?callback=cb"></script> -->
 
 	<script>
-	// function cb(response) {
-	// 	document.getElementById('visits').innerHTML = "<strong>Page Visits : </strong>"+response.value;
-	// }
-	$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+		// function cb(response) {
+		// 	document.getElementById('visits').innerHTML = "<strong>Page Visits : </strong>"+response.value;
+		// }
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
 	</script>
-<style>
-	body{
-		
-		/* margin-top:20px; */
-		background-color: #f5f5ff;
-	}
+	<style>
+		body {
+
+			/* margin-top:20px; */
+			background-color: #f5f5ff;
+		}
 	</style>
+	<style>
+		.redirect-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.85);
+			z-index: 99999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			backdrop-filter: blur(4px);
+		}
+
+		.redirect-modal {
+			background: white;
+			padding: 32px;
+			border-radius: 12px;
+			max-width: 450px;
+			text-align: center;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			margin: 20px;
+		}
+
+		.redirect-modal h3 {
+			margin-top: 0;
+			color: #1e293b;
+			font-size: 24px;
+			margin-bottom: 16px;
+			font-weight: 700;
+		}
+
+		.redirect-modal p {
+			color: #475569;
+			margin-bottom: 24px;
+			line-height: 1.6;
+			font-size: 16px;
+		}
+
+		.redirect-btn {
+			display: inline-block;
+			padding: 12px 24px;
+			margin: 8px;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 600;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			transition: all 0.2s ease;
+		}
+
+		.redirect-btn-primary {
+			background: #3b82f6;
+			color: white;
+			box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
+		}
+
+		.redirect-btn-primary:hover {
+			background: #2563eb;
+			color: white;
+			text-decoration: none;
+			transform: translateY(-1px);
+		}
+
+		.redirect-btn-secondary {
+			background: #f1f5f9;
+			color: #475569;
+		}
+
+		.redirect-btn-secondary:hover {
+			background: #e2e8f0;
+			color: #475569;
+			text-decoration: none;
+		}
+	</style>
+	<div class="redirect-overlay" id="redirectOverlay">
+		<div class="redirect-modal">
+			<h3>We've Moved! 🚀</h3>
+			<p>This tool is now part of the new <strong>Unified Developer Tools</strong> platform, featuring a better
+				UI, dark mode, and even more tools.</p>
+			<div>
+				<a href="https://upendra-thunuguntla.github.io/tools/json2raml/"
+					class="redirect-btn redirect-btn-primary">Take me there</a>
+				<button onclick="document.getElementById('redirectOverlay').style.display='none'"
+					class="redirect-btn redirect-btn-secondary">Stay here</button>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
